@@ -1,0 +1,58 @@
+﻿  Generate moc_predefs.h
+   Qt/MSBuild: 3.4.0.1
+  Reading Qt configuration (D:/IDE/5.12.12/msvc2017_64/bin/qmake)
+   Qt: 5.12.12
+  bootloader.cpp
+  buttondelegate.cpp
+  canthread.cpp
+  crashhandler.cpp
+  editDelegate.cpp
+  globaldata.cpp
+  main.cpp
+  mainwindow.cpp
+  monitor.cpp
+  port.cpp
+  qcustomplot.cpp
+  sql_data.cpp
+  sqliteoperator.cpp
+  usetool.cpp
+  write_data.cpp
+E:\Code\Project_Qt\FuelCellMonitor\bootloader.h(53,19): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“bootloader.cpp”)
+      E:\Code\Project_Qt\FuelCellMonitor\bootloader.h(53,19):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+E:\Code\Project_Qt\FuelCellMonitor\bootloader.h(53,19): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“main.cpp”)
+      E:\Code\Project_Qt\FuelCellMonitor\bootloader.h(53,19):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+E:\Code\Project_Qt\FuelCellMonitor\bootloader.h(53,19): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“mainwindow.cpp”)
+      E:\Code\Project_Qt\FuelCellMonitor\bootloader.h(53,19):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+E:\Code\Project_Qt\FuelCellMonitor\monitor.cpp(260,82): warning C4100: 'channel': 未引用的参数
+E:\Code\Project_Qt\FuelCellMonitor\write_data.cpp(395,85): warning C4100: 'channel': 未引用的参数
+  qrc_res.cpp
+  moc_bootloader.cpp
+  moc_buttondelegate.cpp
+  moc_canthread.cpp
+  moc_editDelegate.cpp
+  moc_mainwindow.cpp
+  moc_monitor.cpp
+  moc_port.cpp
+  moc_qcustomplot.cpp
+  moc_sql_data.cpp
+  moc_write_data.cpp
+E:\Code\Project_Qt\FuelCellMonitor\bootloader.h(53,19): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Debug/moc_bootloader.cpp”)
+      E:\Code\Project_Qt\FuelCellMonitor\bootloader.h(53,19):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+E:\Code\Project_Qt\FuelCellMonitor\bootloader.h(53,19): warning C4200: 使用了非标准扩展: 结构/联合中的零大小数组
+  (编译源文件“Debug/moc_mainwindow.cpp”)
+      E:\Code\Project_Qt\FuelCellMonitor\bootloader.h(53,19):
+      默认构造函数或 copy/move 赋值运算符将忽略此成员
+  
+  FuelCellMonitor.vcxproj -> E:\Code\Project_Qt\FuelCellMonitor\debug\FuelCellMonitor.exe

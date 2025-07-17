@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1330</width>
+    <height>940</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1330</width>
+    <height>940</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>燃料电池管理系统</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">MainWindow,tabWidget_2 {background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.318408 rgba(236, 233, 230, 255), stop:1 rgba(255, 255, 255, 255));}
+
+QMenu {
+	color:black;
+	background-color:white; 
+	border-radius:3px;
+	padding:5px;
+	margin:6px;
+}
+QMenu::item:text { 
+	padding-left:20px;
+	padding-right:20px;
+}
+QMenu::item:selected{ 
+	color:#1aa3ff;
+	background-color: #e5f5ff;
+	border-radius:3px;
+}
+QMenu::separator{
+	height:1px;
+	background:#bbbbbb;
+	margin:5px;
+	margin-left:10px;
+	margin-right:10px;
+}
+QMenuBar{
+	background-color:#bce2e8;
+} 
+QMenuBar::item{
+	spacing:10px;
+	padding:10 20px;
+	border-radius:4px;
+}
+ 
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="mouseTracking">
+    <bool>true</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 25 9pt &quot;Microsoft YaHei&quot;;</string>
+   </property>
+   <layout class="QGridLayout" name="gridLayout_2">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <item row="1" column="0">
+     <layout class="QGridLayout" name="gridLayout_68">
+      <item row="0" column="0">
+       <widget class="QWidget" name="port_status" native="true">
+        <layout class="QGridLayout" name="gridLayout_4">
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
+         <property name="horizontalSpacing">
+          <number>20</number>
+         </property>
+         <item row="0" column="2">
+          <layout class="QGridLayout" name="gridLayout_7">
+           <property name="horizontalSpacing">
+            <number>12</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="text">
+              <string>工作状态:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="collection_led">
+             <property name="text">
+              <string>灯</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_6" columnstretch="0,0">
+           <property name="horizontalSpacing">
+            <number>12</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>端口名称:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="port_name">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="1">
+          <layout class="QGridLayout" name="gridLayout_8" columnstretch="0,0">
+           <property name="horizontalSpacing">
+            <number>12</number>
+           </property>
+           <property name="verticalSpacing">
+            <number>7</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_6">
+             <property name="text">
+              <string>通讯状态:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="connect_led">
+             <property name="text">
+              <string>灯</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QWidget" name="database_status" native="true">
+        <layout class="QGridLayout" name="gridLayout_3">
+         <property name="leftMargin">
+          <number>5</number>
+         </property>
+         <property name="topMargin">
+          <number>5</number>
+         </property>
+         <property name="rightMargin">
+          <number>5</number>
+         </property>
+         <property name="bottomMargin">
+          <number>5</number>
+         </property>
+         <property name="verticalSpacing">
+          <number>7</number>
+         </property>
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout">
+           <property name="horizontalSpacing">
+            <number>12</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label">
+             <property name="text">
+              <string>数据文件名：</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="database_name">
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="0">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="mouseTracking">
+       <bool>true</bool>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="monitor" name="page"/>
+      <widget class="write_data" name="page_2">
+       <property name="mouseTracking">
+        <bool>true</bool>
+       </property>
+      </widget>
+      <widget class="bootloader" name="page_3"/>
+      <widget class="sql_data" name="page_4"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="styleSheet">
+    <string notr="true">font: 25 9pt &quot;Microsoft YaHei&quot;;</string>
+   </property>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1330</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei</family>
+     <pointsize>9</pointsize>
+     <weight>3</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 25 9pt &quot;Microsoft YaHei&quot;;
+QMenuBar{background-color:rgba(236, 233, 230, 255);} 
+</string>
+   </property>
+   <widget class="QMenu" name="menu">
+    <property name="geometry">
+     <rect>
+      <x>1073</x>
+      <y>140</y>
+      <width>137</width>
+      <height>113</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>9</pointsize>
+      <weight>3</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="title">
+     <string>设备配置</string>
+    </property>
+    <addaction name="dev_con"/>
+    <addaction name="separator"/>
+    <addaction name="dev_discon"/>
+   </widget>
+   <widget class="QMenu" name="menu_2">
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>9</pointsize>
+      <weight>3</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="toolTip">
+     <string>写入参数的配置</string>
+    </property>
+    <property name="title">
+     <string>其他功能</string>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>true</bool>
+    </property>
+    <addaction name="save_data"/>
+    <addaction name="separator"/>
+    <addaction name="monitor_widget"/>
+    <addaction name="separator"/>
+    <addaction name="write_widget"/>
+    <addaction name="separator"/>
+    <addaction name="enter_bl"/>
+    <addaction name="separator"/>
+    <addaction name="history_data"/>
+   </widget>
+   <widget class="QMenu" name="menu_3">
+    <property name="geometry">
+     <rect>
+      <x>1149</x>
+      <y>140</y>
+      <width>137</width>
+      <height>392</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Microsoft YaHei</family>
+      <pointsize>9</pointsize>
+      <weight>3</weight>
+      <italic>false</italic>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="title">
+     <string>控制命令</string>
+    </property>
+    <property name="separatorsCollapsible">
+     <bool>false</bool>
+    </property>
+    <property name="toolTipsVisible">
+     <bool>false</bool>
+    </property>
+    <widget class="QMenu" name="menu_bat">
+     <property name="title">
+      <string>BAT使能</string>
+     </property>
+     <addaction name="bat_on"/>
+     <addaction name="separator"/>
+     <addaction name="bat_off"/>
+    </widget>
+    <widget class="QMenu" name="menu_fca">
+     <property name="title">
+      <string>FCA使能</string>
+     </property>
+     <addaction name="fca_on"/>
+     <addaction name="separator"/>
+     <addaction name="fca_off"/>
+    </widget>
+    <widget class="QMenu" name="menu_dc">
+     <property name="title">
+      <string>DCF使能</string>
+     </property>
+     <addaction name="dcf_on"/>
+     <addaction name="separator"/>
+     <addaction name="dcf_off"/>
+    </widget>
+    <addaction name="standby"/>
+    <addaction name="separator"/>
+    <addaction name="normal_on"/>
+    <addaction name="separator"/>
+    <addaction name="low_on"/>
+    <addaction name="separator"/>
+    <addaction name="normal_off"/>
+    <addaction name="separator"/>
+    <addaction name="low_off"/>
+    <addaction name="separator"/>
+    <addaction name="fc_check1"/>
+    <addaction name="separator"/>
+    <addaction name="fc_check2"/>
+    <addaction name="separator"/>
+    <addaction name="sys_reset"/>
+    <addaction name="separator"/>
+    <addaction name="menu_bat"/>
+    <addaction name="separator"/>
+    <addaction name="menu_dc"/>
+    <addaction name="separator"/>
+    <addaction name="menu_fca"/>
+   </widget>
+   <addaction name="menu"/>
+   <addaction name="menu_3"/>
+   <addaction name="menu_2"/>
+  </widget>
+  <action name="standby">
+   <property name="text">
+    <string>待机状态</string>
+   </property>
+   <property name="iconText">
+    <string notr="true">待机状态</string>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
+  </action>
+  <action name="normal_on">
+   <property name="text">
+    <string>正常开机</string>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+  </action>
+  <action name="low_on">
+   <property name="text">
+    <string>低温开机</string>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+  </action>
+  <action name="fc_check1">
+   <property name="text">
+    <string>FC1自检</string>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+  </action>
+  <action name="fc_check2">
+   <property name="text">
+    <string>FC2自检</string>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+  </action>
+  <action name="sys_reset">
+   <property name="text">
+    <string>系统复位</string>
+   </property>
+   <property name="font">
+    <font/>
+   </property>
+  </action>
+  <action name="dev_con">
+   <property name="text">
+    <string>设备连接</string>
+   </property>
+  </action>
+  <action name="dev_discon">
+   <property name="text">
+    <string>设备断开</string>
+   </property>
+  </action>
+  <action name="save_data">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>数据保存</string>
+   </property>
+  </action>
+  <action name="enter_bl">
+   <property name="text">
+    <string>烧写窗口</string>
+   </property>
+  </action>
+  <action name="write_widget">
+   <property name="text">
+    <string>写入窗口</string>
+   </property>
+  </action>
+  <action name="monitor_widget">
+   <property name="text">
+    <string>监测数据</string>
+   </property>
+  </action>
+  <action name="history_data">
+   <property name="text">
+    <string>历史数据</string>
+   </property>
+  </action>
+  <action name="normal_off">
+   <property name="text">
+    <string>正常关机</string>
+   </property>
+  </action>
+  <action name="low_off">
+   <property name="text">
+    <string>低温关机</string>
+   </property>
+  </action>
+  <action name="bat_on">
+   <property name="text">
+    <string>开启</string>
+   </property>
+  </action>
+  <action name="bat_off">
+   <property name="text">
+    <string>关闭</string>
+   </property>
+  </action>
+  <action name="fca_on">
+   <property name="text">
+    <string>开启</string>
+   </property>
+  </action>
+  <action name="fca_off">
+   <property name="text">
+    <string>关闭</string>
+   </property>
+  </action>
+  <action name="dcf_on">
+   <property name="text">
+    <string>开启</string>
+   </property>
+  </action>
+  <action name="dcf_off">
+   <property name="text">
+    <string>关闭</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>write_data</class>
+   <extends>QWidget</extends>
+   <header location="global">write_data.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>bootloader</class>
+   <extends>QWidget</extends>
+   <header location="global">bootloader.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>sql_data</class>
+   <extends>QWidget</extends>
+   <header location="global">sql_data.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>monitor</class>
+   <extends>QWidget</extends>
+   <header location="global">monitor.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

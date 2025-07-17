@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>write_data</class>
+ <widget class="QWidget" name="write_data">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1216</width>
+    <height>968</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>动态参数写入</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 25 9pt &quot;Microsoft YaHei&quot;;</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_4" columnstretch="0,0,0">
+   <item row="0" column="2">
+    <layout class="QGridLayout" name="gridLayout" columnstretch="0,1,0,1">
+     <item row="0" column="2">
+      <widget class="QLabel" name="label_21">
+       <property name="text">
+        <string>软件版本：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QLCDNumber" name="SOFTWARE">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>70</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>9</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLCDNumber" name="HARDWARE">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>70</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <family>Microsoft YaHei</family>
+         <pointsize>9</pointsize>
+         <weight>3</weight>
+         <italic>false</italic>
+         <bold>false</bold>
+        </font>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_20">
+       <property name="text">
+        <string>硬件版本：</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="1">
+    <layout class="QGridLayout" name="gridLayout_12">
+     <item row="0" column="2">
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="text">
+        <string>加载参数文件</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="3">
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="text">
+        <string>保存参数文件</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QPushButton" name="read_module">
+       <property name="text">
+        <string>读取数据</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QPushButton" name="check_module">
+       <property name="text">
+        <string>模块查询</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="0" column="0">
+    <layout class="QGridLayout" name="gridLayout_5">
+     <item row="0" column="3">
+      <widget class="QComboBox" name="projectConfig_cbx">
+       <property name="minimumSize">
+        <size>
+         <width>150</width>
+         <height>0</height>
+        </size>
+       </property>
+       <item>
+        <property name="text">
+         <string>DCF(燃料电池DC/DC变换器)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>FCU(燃料电池控制系统)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>HSCS(供氢监测和控制系统)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>FCPS-E_BIKE(两轮车动力系统)</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="0" column="2">
+      <widget class="QLabel" name="module_led">
+       <property name="text">
+        <string>LED</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>系统配置：</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item row="1" column="0" colspan="3">
+    <widget class="QStackedWidget" name="stackedWidget">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="currentIndex">
+      <number>3</number>
+     </property>
+     <widget class="QWidget" name="page_3">
+      <layout class="QGridLayout" name="gridLayout_13">
+       <item row="0" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBox_7">
+         <property name="font">
+          <font>
+           <family>Microsoft YaHei</family>
+           <pointsize>9</pointsize>
+           <weight>3</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="title">
+          <string>DCF参数</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_16">
+          <item row="0" column="0">
+           <widget class="QTableView" name="TableView_DCF">
+            <property name="minimumSize">
+             <size>
+              <width>260</width>
+              <height>200</height>
+             </size>
+            </property>
+            <property name="mouseTracking">
+             <bool>true</bool>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">/* 表格设置 */
+QTableView{  /** QTableView设置 */
+    border: none;
+    selection-background-color: rgb(255, 214, 102,150); /*选中区域的背景色*/
+	selection-color: #000000; /*选中区域的文字颜色*/
+	background-color: #dfe4ea
+}
+ 
+QHeaderView::section{         /*表头设置*/
+    border: none;
+	border-right: 2px solid #6d63c7;
+    height:20px;    /*表头高度*/
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+    background-color: #69c0ff;
+	text-align: center;
+}
+
+</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="DCF_WRITE">
+            <property name="text">
+             <string>一键写入</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="page_5"/>
+     <widget class="QWidget" name="page_6"/>
+     <widget class="QWidget" name="page_4">
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="0" column="0">
+        <widget class="QScrollArea" name="scrollArea_2">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_2">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>1170</width>
+            <height>883</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="0" column="0" rowspan="3">
+            <widget class="QGroupBox" name="groupBox">
+             <property name="title">
+              <string> FCU参数</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_3">
+              <item row="0" column="0">
+               <widget class="QTableView" name="TableView_FCCB_FCU">
+                <property name="minimumSize">
+                 <size>
+                  <width>260</width>
+                  <height>200</height>
+                 </size>
+                </property>
+                <property name="mouseTracking">
+                 <bool>true</bool>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">/* 表格设置 */
+QTableView{  /** QTableView设置 */
+    border: none;
+    selection-background-color: rgb(255, 214, 102,150); /*选中区域的背景色*/
+	selection-color: #000000; /*选中区域的文字颜色*/
+	background-color: #dfe4ea
+}
+ 
+QHeaderView::section{         /*表头设置*/
+    border: none;
+	border-right: 2px solid #6d63c7;
+    height:20px;    /*表头高度*/
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+    background-color: #69c0ff;
+	text-align: center;
+}
+
+</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <layout class="QGridLayout" name="gridLayout_2" columnstretch="0,2">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label_31">
+               <property name="minimumSize">
+                <size>
+                 <width>140</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>控制器RTC时间：</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLabel" name="FCCB_Time">
+               <property name="minimumSize">
+                <size>
+                 <width>100</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Microsoft YaHei</family>
+                 <pointsize>9</pointsize>
+                 <weight>3</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QLabel{border:1px solid #242424;}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item row="1" column="1">
+            <widget class="QTableView" name="TableView_FCCB_DCF">
+             <property name="minimumSize">
+              <size>
+               <width>260</width>
+               <height>200</height>
+              </size>
+             </property>
+             <property name="mouseTracking">
+              <bool>true</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">/* 表格设置 */
+QTableView{  /** QTableView设置 */
+    border: none;
+    selection-background-color: rgb(255, 214, 102,150); /*选中区域的背景色*/
+	selection-color: #000000; /*选中区域的文字颜色*/
+	background-color: #dfe4ea
+}
+ 
+QHeaderView::section{         /*表头设置*/
+    border: none;
+	border-right: 2px solid #6d63c7;
+    height:20px;    /*表头高度*/
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+    background-color: #69c0ff;
+	text-align: center;
+}
+
+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QTableView" name="TableView_FCCB_BAT">
+             <property name="minimumSize">
+              <size>
+               <width>260</width>
+               <height>200</height>
+              </size>
+             </property>
+             <property name="mouseTracking">
+              <bool>true</bool>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">/* 表格设置 */
+QTableView{  /** QTableView设置 */
+    border: none;
+    selection-background-color: rgb(255, 214, 102,150); /*选中区域的背景色*/
+	selection-color: #000000; /*选中区域的文字颜色*/
+	background-color: #dfe4ea
+}
+ 
+QHeaderView::section{         /*表头设置*/
+    border: none;
+	border-right: 2px solid #6d63c7;
+    height:20px;    /*表头高度*/
+    color: white;
+    font-size: 15px;
+    font-weight: 900;
+    background-color: #69c0ff;
+	text-align: center;
+}
+
+</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="2">
+            <widget class="QPushButton" name="FCCB_WRITE">
+             <property name="text">
+              <string>一键写入</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

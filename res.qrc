@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/picture">
+        <file alias="connect">picture/连接.png</file>
+        <file alias="write">picture/写入.png</file>
+        <file alias="download">picture/下载.png</file>
+        <file alias="download_red">picture/下载-红.png</file>
+    </qresource>
+</RCC>
